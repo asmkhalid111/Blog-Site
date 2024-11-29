@@ -1,0 +1,42 @@
+<header>
+    <h1 class="visually-hidden">Messy Ideas</h1>
+    <a href="/" class="logo">
+        <img src="../../public/images/blog-icon.svg" alt="The Logo of our Blog" />
+
+    <nav><ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Categories</a></li>
+    </ul>
+</header>
+
+<style>
+    img{
+        width: 40px;
+        height: 40px;
+    
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+    }
+    a{
+        text-decoration: none;
+        color: var(--clr-gray-100);
+
+        &:hover,&:focus-visible{
+            text-decoration: underline;
+            color: var(--clr-gray-400);
+        }
+    }
+</style>

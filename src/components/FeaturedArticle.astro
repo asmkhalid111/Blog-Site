@@ -1,0 +1,44 @@
+---
+const {class: className} = Astro.props;
+---
+
+<div class:list= {[className, "featured-article-container"]}>     
+    <h2 class="visually-hidden">Featured Article</h2>
+    <article>
+        <img src="../../public/images/mountain.jpg" alt="">
+        <h3>This will come from CMS</h3>
+        <div class="flow">
+            <p>
+                Here will be a lot more text that will be coming from the CMS. Create a cms system that will take your description of mountain and put it Here.
+            </p>
+            <a href="#"  class="button">Read More <span class="visually-hidden">Ahout the the hike that i did in the blue mountain</span></a>
+        </div>
+    </article>
+</div>
+    
+    <style>
+
+        .featured-article-container{
+            container-type: inline-size;
+        }
+        article{
+            display: grid;
+            gap: 1rem;
+
+            @container (min-width: calc(25ch * 2)) {
+                gap: 2rem;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+        }
+        
+        img{
+            grid-column: 1/-1;
+            
+        }
+        
+        h3{
+            font-size: var(--fs-600);
+        }
+</style>
